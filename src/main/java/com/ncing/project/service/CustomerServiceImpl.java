@@ -18,6 +18,7 @@ public class CustomerServiceImpl implements CustomerService{
 	@Override
 	public Customer saveCustomers(Customer customer) {
 		// TODO Auto-generated method stub
+		customer.setParentCard(customer.getId()-1);
 		return customerRepo.save(customer);
 	}
 
